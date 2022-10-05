@@ -1,7 +1,7 @@
 version: '3'
 services:
         web:
-                image: flask_group_v1
+                image: flask_ourgroup_v1
                 build: .
                 ports:
                         - "8066:8080"
@@ -13,4 +13,4 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: /home/ubuntu/groupflaskproject/volumes
+      device: /home/ubuntu/flask_python_group/volumes
