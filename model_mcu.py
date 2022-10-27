@@ -16,7 +16,7 @@ response = requests.request("GET", url, headers=headers)
 # End Rapid API Code
 #json = response.json()  # convert response to python json object
 
-print("MCU List:")
+print("MCU Comics/Characters List:")
 movies = response.json()
 movies.pop(0)
   
