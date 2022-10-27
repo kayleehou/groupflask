@@ -18,12 +18,9 @@ response = requests.request("GET", url, headers=headers)
 
 print("MCU List:")
 movies = response.json()
-
-#for item in mculist:	
-	#for k,v in item:
-		#print(k,v)
+movies.pop(0)
   
 for movie in movies:
     print(movie["title"]) 
     print("\t" + movie["link"])
-    print("\t" + movie["source"])
+    # print("\t" + movie["source"])
