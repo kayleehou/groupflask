@@ -1,10 +1,10 @@
 <!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
-<!- This variable sets name of browser tab  -->
+
 {% set project = "Our Idea" %}
-<!- This is a replacement block for Body in base.html -->
+
 {% block body %}
-    <!- Try building a new body here, bootstrap is a wise choice ->
+
 <body style="background-color:lightblue">
     <div class="px-5 py-5 mx-auto">
         <h1 class="text-primary"><strong>Our Project</strong></h1>
@@ -15,6 +15,6 @@
         <h2 class="text-secondary">What Happened to your old idea?
         <p class="text-secondary">For an escape room game, it was going to take a lot more time and effort put into it than originally anticipated, so we had to cut back to a showcase as a result. So while it was a creative idea to make an adventure game for a project, it was a lot more time-consuming and advanced than we anticipated.</p>
 {% endblock %}
-<!- This is turning off birds background from base.html -->
+
 {% block background %}
 {% endblock %}
