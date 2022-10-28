@@ -12,7 +12,6 @@ app_api = Blueprint('api', __name__,
 api = Api(app_api)
     
 if __name__ == "__main__": 
-    # server = "http://127.0.0.1:5000" # run local
     server = 'http://escaperoom.nighthawkcodescrums.gq/' # run from web
     url = server + "/api/mcu"
     responses = []  # responses list
