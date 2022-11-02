@@ -3,7 +3,6 @@ from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from model_jokes import initJokes
-from model_mcu import initJokes
 
 """
 These object can be used throughout project.
