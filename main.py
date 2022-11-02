@@ -21,6 +21,10 @@ def index():
 def stub():
     return render_template("stub.html")
 
+@app.route('/ouridea/')  # connects /ouridea/ URL to stub() function
+def ouridea():
+    return render_template("ouridea.html")
+
 # this runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
