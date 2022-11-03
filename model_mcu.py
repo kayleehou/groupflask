@@ -56,7 +56,7 @@ def getMCUAPI():
 	        "X-RapidAPI-Host": "mcu-comics-and-characters.p.rapidapi.com"
         }
         response = requests.request("GET", url, headers=headers)
-        covid_data = response
+        MCU_data = response
     else:  
         response = MCU_data
 
