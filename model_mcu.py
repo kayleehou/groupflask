@@ -56,11 +56,10 @@ def getMCUAPI():
 	        "X-RapidAPI-Host": "mcu-comics-and-characters.p.rapidapi.com"
         }
         response = requests.request("GET", url, headers=headers)
-        MCU_data = response
-    else:  
-        response = MCU_data
+        MCU_data = response.json()
+        MCU_data.pop(0)
 
-    return response
+    return MCU_data
 
 
 """API with Country Filter
@@ -71,10 +70,8 @@ def getMCU(filter):
     # Request Covid Data
     response = getMCUAPI()
     # Look for Country    
-
-    comics.pop(0)
   
-    comics = response.json().get('comic name')
+    comics = response.get('comic name')
     for comic in comics:  # countries is a list
         if comic["title"].lower() == filter.lower():  # this filters for country
             return comic
@@ -89,7 +86,7 @@ class MCUAPI:
     """API Method to GET all Covid Data"""
     class _Read(Resource):
         def get(self):
-            return getMCUAPI().json()
+            return getMCUAPI()
         
     """API Method to GET Covid Data for a Specific Country"""
     class _ReadMCU(Resource):
